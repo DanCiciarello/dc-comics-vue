@@ -2,26 +2,26 @@
     <div>
         <div class="cdFooter">
             <div class="container text-white">
-                <div class="row">
+                <div class="d-flex">
 
                     <!-- First column -->
-                    <div class="col-1 py-4">
+                    <div class="cdCol">
                         
                         <!-- DC Comics menu -->
-                        <h6 class="text-uppercase">DC Comics</h6>
+                        <h5 class="text-uppercase">DC Comics</h5>
                         <ul class="list-unstyled pb-4">
                             <li v-for="(item, i) in dcComicsMenu" :key="i">
-                                <a class="text-reset text-decoration-none" :href="item.href">
+                                <a class="text-reset text-decoration-none cdFooterMenuItem" :href="item.href">
                                 {{ item.name }}
                                 </a>
                             </li>
                         </ul>
 
                         <!-- Shop menu -->
-                        <h6 class="text-uppercase">Shop</h6>
+                        <h5 class="text-uppercase">Shop</h5>
                         <ul class="list-unstyled">
                             <li v-for="(item, i) in shopMenu" :key="i">
-                                <a class="text-reset text-decoration-none" :href="item.href">
+                                <a class="text-reset text-decoration-none cdFooterMenuItem" :href="item.href">
                                 {{ item.name }}
                                 </a>
                             </li>
@@ -30,13 +30,13 @@
                     </div>
 
                     <!-- Second column -->
-                    <div class="col-1 py-4">
+                    <div class="cdCol">
                         
                         <!-- DC menu -->
-                        <h6 class="text-uppercase">DC</h6>
+                        <h5 class="text-uppercase">DC</h5>
                         <ul class="list-unstyled pb-4">
                             <li v-for="(item, i) in dcMenu" :key="i">
-                                <a class="text-reset text-decoration-none" :href="item.href">
+                                <a class="text-reset text-decoration-none cdFooterMenuItem" :href="item.href">
                                 {{ item.name }}
                                 </a>
                             </li>
@@ -45,13 +45,13 @@
                     </div>
 
                     <!-- Third column -->
-                    <div class="col-1 py-4">
+                    <div class="cdCol">
                         
                         <!-- DC menu -->
-                        <h6 class="text-uppercase">Sites</h6>
+                        <h5 class="text-uppercase">Sites</h5>
                         <ul class="list-unstyled pb-4">
                             <li v-for="(item, i) in sitesMenu" :key="i">
-                                <a class="text-reset text-decoration-none" :href="item.href">
+                                <a class="text-reset text-decoration-none cdFooterMenuItem" :href="item.href">
                                 {{ item.name }}
                                 </a>
                             </li>
@@ -60,9 +60,7 @@
                     </div>
 
                     <!-- Logo column -->
-                    <div class="col-9 d-flex justify-content-end">
-                        <img src="../assets/img/dc-logo-bg.png" alt="Logo DC" class="cdFooterImg">
-                    </div>
+                    <div class="cdColImg flex-grow-1 d-flex justify-content-end"></div>
 
                 </div>
             </div>
@@ -206,12 +204,22 @@ export default {
 
 .cdFooter {
     background-image: url("../assets/img/footer-bg.jpg");
-    background-size: contain;
-    overflow: hidden;
+    background-size: cover;
 
-    .cdFooterImg {
-        transform: translateY(-5%);
-        position: absolute;
+    .cdCol {
+        width: 150px;
+        padding: 30px 0;
+    }
+
+    .cdColImg {
+        background-image: url("../assets/img/dc-logo-bg.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    .cdFooterMenuItem {
+        font-size: 12px;
+        color: grey!important;
     }
 }
 
