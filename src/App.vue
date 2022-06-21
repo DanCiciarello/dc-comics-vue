@@ -1,31 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <!-- Header component -->
+    <TheHeader />
+
+    <!-- Main content -->
+    <main>
+      <div class="bg-dark py-5">
+        <div class="container">
+          <p class="text-white">CONTENT GOES HERE</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Banner blue with icons -->
+    <BannerBlue />
+    
+    <!-- Footer menu -->
+    <TheFooter />
+
+    <!-- Banner with sign up CTA -->
+    <BannerSignUp />
+  
   </div>
 </template>
 
+<!-- ----------------------------- -->
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
+import BannerBlue from "./components/BannerBlue.vue";
+import BannerSignUp from "./components/BannerSignUp.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TheHeader,
+    TheFooter,
+    BannerBlue,
+    BannerSignUp
+}
 }
 </script>
+
+<!-- ----------------------------- -->
 
 <style lang="scss">
 
 @import "./assets/scss/main.scss";
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
