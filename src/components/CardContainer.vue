@@ -9,8 +9,8 @@
                     <CardItem :serie="serie" />
                 </div>
             </div>
-            <div class="row">
-                
+            <div class="d-flex justify-content-center pt-3 pb-5">
+                <button type="button" class="btn btn-primary text-uppercase">Load more</button>
             </div>
         </div>
     </div>
@@ -113,15 +113,23 @@ export default {
 
 .cdContainer {
     background-color: $dark;
+    .cdSectionTitle {
+        display: inline-block;
+        color: #ffffff;
+        background-color: $primary;
+        padding: 10px 25px;
+        transform: translateY(-25px);
+        font-weight: 600;
+    }
+    .btn {
+        font-family: 'Asap Condensed', sans-serif;
+        font-weight: 600;
+        padding: 8px 90px;
+        border-radius: 0;
+    }
+
 }
 
-.cdSectionTitle {
-    display: inline-block;
-    color: #ffffff;
-    background-color: $primary;
-    padding: 10px 25px;
-    transform: translateY(-25px);
-    font-weight: 600;
-}
+
 
 </style>

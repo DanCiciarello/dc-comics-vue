@@ -3,8 +3,20 @@
         <div class="cdThumbImg">
             <img :src="serie.thumb" alt="serie.series">
             <div class="card-img-overlay">
-                <p class="card-text"><span class="cdInnerTitle">PRICE:</span><br>{{ serie.price }}</p>
-                <p class="card-text"><span class="cdInnerTitle">TYPE:</span><br>{{ serie.type }}</p>
+                <p class="card-text">
+                    <span class="cdInnerTitle">
+                        PRICE:
+                    </span>
+                    <br>
+                    {{ serie.price }}
+                </p>
+                <p class="card-text">
+                    <span class="cdInnerTitle">
+                        TYPE:
+                    </span>
+                    <br>
+                    {{ serie.type }}
+                </p>
             </div>
         </div>
         <div>
@@ -51,7 +63,6 @@ export default {
     }
 
 }
-
 
 .cdThumbTitle {
     display: inline-block;
