@@ -4,14 +4,11 @@
     <!-- Header component -->
     <TheHeader />
 
-    <!-- Main content -->
-    <main>
-      <div class="bg-dark py-5">
-        <div class="container">
-          <p class="text-white">CONTENT GOES HERE</p>
-        </div>
-      </div>
-    </main>
+    <!-- Hero image -->
+    <HeroImage />
+
+    <!-- Current Series -->
+    <CardContainer />
 
     <!-- Banner blue with icons -->
     <BannerBlue />
@@ -33,6 +30,8 @@ import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
 import BannerBlue from "./components/BannerBlue.vue";
 import BannerSignUp from "./components/BannerSignUp.vue";
+import CardContainer from "./components/CardContainer.vue";
+import HeroImage from "./components/HeroImage.vue";
 
 export default {
   name: 'App',
@@ -40,7 +39,9 @@ export default {
     TheHeader,
     TheFooter,
     BannerBlue,
-    BannerSignUp
+    BannerSignUp,
+    CardContainer,
+    HeroImage
 }
 }
 </script>
