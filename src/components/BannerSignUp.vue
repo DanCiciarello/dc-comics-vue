@@ -12,8 +12,11 @@
                     </div>
 
                     <!-- Second column -->
-                    <div>
+                    <div class="d-flex align-items-center">
                         <h5 class="text-primary text-uppercase">Follow us</h5>
+                        <div v-for="(social, i) in imgFooter" :key="i">
+                            <a href="#"><img class="cdFooterImg" :src="social.url" :alt="social.name"></a>
+                        </div>
                     </div>
 
                 </div>
@@ -28,8 +31,42 @@
 
 export default {
     name: "BannerSignUp",
+    data(){
+        return {
+            imgFooter: [
+                {
+                    name: "Facebook",
+                    url: [require("../assets/img/footer-facebook.png")],
+                },
+                {
+                    name: "Twitter",
+                    url: [require("../assets/img/footer-twitter.png")],
+                },
+                {
+                    name: "Youtube",
+                    url: [require("../assets/img/footer-youtube.png")],
+                },
+                {
+                    name: "Pinterest",
+                    url: [require("../assets/img/footer-pinterest.png")],
+                },
+                {
+                    name: "Periscope",
+                    url: [require("../assets/img/footer-periscope.png")],
+                }
+            ]
+        }
+    },
 }
 
 </script>
 
 <!-- ------------------------ -->
+
+<style lang="scss" scoped>
+
+.cdFooterImg {
+    padding-left: 10px;
+}
+
+</style>

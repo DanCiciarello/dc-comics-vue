@@ -12,7 +12,7 @@
                 <div>
                     <ul class="navbar-nav">
                         <li class="nav-item" v-for="(link, i) in navLinks" :key="i">
-                            <a class="nav-link text-uppercase" :class="{active: i === 1}" href="#">{{ link.name }}</a>
+                            <a class="cdNavItem nav-link text-uppercase" :class="{active: i === 1}" href="#">{{ link.name }}</a>
                         </li>
                     </ul>
                 </div>
@@ -82,6 +82,18 @@ export default {
 
 <style lang="scss" scoped>
 
-    
+@import "../assets/scss/_variables";
+@import "~bootstrap/scss/bootstrap";
+
+.cdNavItem {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 12px;
+    margin-left: 15px;
+    height: 100%;
+
+    &.active {
+        border-bottom: 2px solid $primary;
+    }
+}
 
 </style>
